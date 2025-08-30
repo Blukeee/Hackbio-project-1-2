@@ -1,1 +1,51 @@
+#!/bin/bash
+#Project 2 - Installing Bioinformatics Software on the Terminal
+#Author- Blessing Oyebamiji
+
+#Activate your base conda environment
+(base) oyebamiji_pelu@cloudshell:~$ conda activate base
+(base) oyebamiji_pelu@cloudshell:~$ source /home/oyebamiji_pelu/ENTER/bin/activate base
+
+#Create a conda environment named funtools
+(base) oyebamiji_pelu@cloudshell:~$ conda create --name funtools
+
+#Activate the funtools environment
+(base) oyebamiji_pelu@cloudshell:~$ conda activate funtools
+
+#Install Figlet using conda or apt-get
+(funtools) oyebamiji_pelu@cloudshell:~$ sudo apt-get update
+sudo apt-get install figlet
+
+Run figlet <your name>
+(funtools) oyebamiji_pelu@cloudshell:~$ figlet Blessing
+ ____  _               _             
+| __ )| | ___  ___ ___(_)_ __   __ _ 
+|  _ \| |/ _ \/ __/ __| | '_ \ / _` |
+| |_) | |  __/\__ \__ \ | | | | (_| |
+|____/|_|\___||___/___/_|_| |_|\__, |
+                               |___/ 
+#Install bwa through the bioconda channel
+(funtools) oyebamiji_pelu@cloudshell:~$ conda install bwa
+
+#Install blast through the bioconda channel
+(funtools) oyebamiji_pelu@cloudshell:~$ conda install blast                                                        
+
+#Install samtools through the bioconda channel
+Install samtools through the bioconda channel
+
+#Install bedtools through the bioconda channel
+(funtools) oyebamiji_pelu@cloudshell:~$ conda install bedtools
+
+#Install spades.py through the bioconda channel
+(funtools) oyebamiji_pelu@cloudshell:~$ conda install spades
+
+#Install bcftools through the bioconda channel
+Install bcftools through the bioconda channel
+
+#Install fastp through the bioconda channel
+(funtools) oyebamiji_pelu@cloudshell:~$ conda install fastp
+
+#Install multiqc through the bioconda channel
+(funtools) oyebamiji_pelu@cloudshell:~$ conda install multiqc
+
 
