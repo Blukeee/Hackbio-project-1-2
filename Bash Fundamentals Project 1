@@ -1,1 +1,53 @@
+#!/bin/bash
+#Bash Basics Project 1
+#Author- Blessing Oyebamiji
+
+#Print your name
+oyebamiji_pelu@cloudshell:~$ echo Blessing
+
+#Create a folder titled your name
+oyebamiji_pelu@cloudshell:~$ mkdir Blessing
+
+#Create another new directory titled biocomputing and change to that directory with one line of command
+oyebamiji_pelu@cloudshell:~$ mkdir biocomputing && cd biocomputing
+
+#Download these 3 files:
+  https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+  https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+  https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+oyebamiji_pelu@cloudshell:~/biocomputing$ wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna -O
+oyebamiji_pelu@cloudshell:~/biocomputing$ wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk -O
+oyebamiji_pelu@cloudshell:~/biocomputing$ wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gpk -O
+
+#Move the .fna file to the folder titled your name
+oyebamiji_pelu@cloudshell:~/biocomputing$ mv wildtype.fna /home/oyebamiji_pelu/Blessing
+
+#Delete the duplicate gbk file
+oyebamiji_pelu@cloudshell:~/biocomputing$ rm wildtype.gbk.1
+
+#Confirm if the .fna file is mutant or wild type (tatatata vs tata)
+oyebamiji_pelu@cloudshell:~/Blessing$ grep "tatatata" wildtype.fna
+
+#If mutant, print all matching lines into a new file
+oyebamiji_pelu@cloudshell:~/Blessing$ grep "tatatata" wildtype.fna > mutant_lines.fna
+
+#Count number of lines (excluding header) in the .gbk file
+oyebamiji_pelu@cloudshell:~/biocomputing$ tail -n +2 wildtype.gbk | wc -l
+
+#Print the sequence length of the .gbk file. (Use the LOCUS tag in the first line)
+oyebamiji_pelu@cloudshell:~/biocomputing$ grep "^LOCUS" wildtype.gbk
+
+#Print the source organism of the .gbk file. (Use the SOURCE tag in the first line)
+oyebamiji_pelu@cloudshell:~/biocomputing$ grep "^SOURCE" wildtype.gbk
+
+#List all the gene names of the .gbk file. Hint {grep '/gene='}
+oyebamiji_pelu@cloudshell:~/biocomputing$ grep '/gene="' wildtype.gbk | cut -d '"' -f 2
+
+#List the files in the two folders
+oyebamiji_pelu@cloudshell:clear
+oyebamiji_pelu@cloudshell:history
+
+#List the files in the two folders
+oyebamiji_pelu@cloudshell:~/biocomputing$ cd /home/oyebamiji_pelu/
+oyebamiji_pelu@cloudshell:~$ ls biocomputing Blessing
 
